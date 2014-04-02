@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NoteUp</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.min.css" />
+    </head>
+    <body>
+        <nav id="toolbar" class="ui-widget-header ui-corner-all">
+            <span>
+                <button data-file-dialog-handler="file-to-open">Open File</button><input type="file" class="file-dialog" name="file-to-open" accept=".md,.mdown,.markdown,.txt" />
+            </span>
+            <span>
+                <button data-file-dialog-handler="file-to-save">Save File</button><input type="file" class="file-dialog" nwsaveas="file.md" name="file-to-save" />
+            </span>
+            <span>
+                <button data-file-dialog-handler="file-to-export">Export</button><input type="file" class="file-dialog" nwsaveas="file.html" name="file-to-export" />
+            </span>
+            <span class="v-separator"></span>
+            <input type="radio" id="mode-edition-choice" name="mode-choice" value="edit" checked="checked" /><label for="mode-edition-choice">Edition Mode</label>
+            <input type="radio" id="mode-preview-choice" name="mode-choice" value="preview" /><label for="mode-preview-choice">Preview Mode</label>
+            <span class="v-separator"></span>
+            <button id="fullscreen">Fullscreen</button>
+        </nav>
+        <div id="epiceditor"></div>
+        <script src="lib/EpicEditor-v0.2.2/js/epiceditor.min.js"></script>
+        <script src="lib/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+        <script src="lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script>$(function() { $( "nav" ).buttonset(); });</script>
+        <script src="js/file-dialog.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

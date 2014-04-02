@@ -1,0 +1,25 @@
+#editor {
+    height: 80%;
+}
+
+nav {
+    font-size: 80%;
+    margin: 0 0 3px 0;
+    width: 100%;
+}
+
+nav > * {
+    margin: 0 1px 0 1px;
+}
+
+nav .v-separator {
+    margin: 0 2px 0 2px;
+}
+
+button {
+     outline: none;
+}
+
+input[type=file].file-dialog {
+    display: none;
+}
