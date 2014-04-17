@@ -31,6 +31,10 @@
     }
 
     editor.load(function () {
+        if (argv.length) {
+            file_manager.openFile(argv.join(' '));
+        }
+
         jQuery(function () {
             $('input[type=file][name=file-to-open]').on('change', handleFile(function (file_path) {
                 file_manager.openFile(file_path);
