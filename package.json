@@ -27,6 +27,6 @@
     "min_height": 100,
     "single-instance": false,
     "user-agent": "%name#%ver on NodeWebKit#%nwver (WebKit#%webkit_ver) %osinfo",
-    "show_in_taskbar": false
+    "show_in_taskbar": true
   }
 }
