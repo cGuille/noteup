@@ -1,9 +1,8 @@
 {
   "name": "noteup",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "readmeFilename": "README.md",
-  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,18 +14,8 @@
   ],
   "author": "Guillaume Charmetant <cguille.dev@gmail.com> (https://github.com/cGuille)",
   "license": "MIT",
-  "window": {
-    "title": "NoteUp",
-    "icon": "",
-    "toolbar": false,
-    "frame": true,
-    "width": 800,
-    "height": 500,
-    "position": "center",
-    "min_width": 200,
-    "min_height": 100,
-    "single-instance": false,
-    "user-agent": "%name#%ver on NodeWebKit#%nwver (WebKit#%webkit_ver) %osinfo",
-    "show_in_taskbar": true
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-node-webkit-builder": "*"
   }
 }
