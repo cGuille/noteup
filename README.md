@@ -4,6 +4,9 @@ NoteUp
 NoteUp is a desktop markdown editor software based upon Node-WebKit and EpicEditor.
 
 # Installation
+Download the binaries for your platform as a zip archive [from the release page](https://github.com/cGuille/noteup/releases).
+
+# Build the app
 
 ### TL;DR:
 ```bash
