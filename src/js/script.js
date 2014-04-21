@@ -5,6 +5,7 @@
     var argv = require('nw.gui').App.argv;
     var FileManager = require('./js/file-manager');
 
+    var $window = $(window);
     var keys = {
         escape: 27
     };
@@ -14,7 +15,7 @@
         basePath: 'lib/EpicEditor-v0.2.2/',
         focusOnLoad: true,
         button: false,
-        autogrow: true,
+        autogrow: false,
         file: {
             name: WORKING_FILE_NAME,
             autoSave: 3000,
@@ -31,11 +32,20 @@
     }
 
     editor.load(function () {
+        // editor.reflow();
         if (argv.length) {
             file_manager.openFile(argv.join(' '));
         }
 
         jQuery(function () {
+            var $toolbar = $('#toolbar');
+            $window.on('scroll', function () {
+                $toolbar.toggleClass('sticky', $window.scrollTop() > 0);
+            });
+
+            var $editor = $(editor.element);
+            $editor.removeAttr('style');
+
             $('input[type=file][name=file-to-open]').on('change', handleFile(function (file_path) {
                 file_manager.openFile(file_path);
             }));
