@@ -187,11 +187,11 @@
 
     /**
      * @param  {EventEmitter} emitter
-     * @param  {string} file_path
      * @param  {string} data
+     * @param  {string} file_path
      * @return {boolean} Returns true if event had listeners, false otherwise.
      */
-    function emitOpened(emitter, file_path, data) {
+    function emitOpened(emitter, data, file_path) {
         var event = {
             type: EVENT_OPENED,
             data: data,
